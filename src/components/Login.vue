@@ -1,15 +1,20 @@
 <template>
     <div class="login_container">
         <!-- 1.头部标题logo -->
-        <div>
-            <h1>LOGO</h1>
+         <div class="login-header">
+             <div>
+                 <h1 class="fl"><img src="../assets/img/login/logo.png" alt=""></h1>
+                 <p class="fl">云商城后台管理系统</p>
+             </div>
         </div>
+
         <!-- 2登录框 -->
         <div class="login_box">
           <!--2.1 头像 -->
-          <div class="avatar_box">
-              <img src="../assets/logo.png" alt="">
-          </div>
+          <!-- <div class="avatar_box">
+              <img src="../assets/img/login/tx.jpeg" alt="">
+          </div> -->
+          <h2>登 &nbsp;&nbsp;&nbsp;&nbsp; 录</h2>
           <!-- 2.2 登录表单 -->
            <div> 
                <el-form ref="loginFormRef" :model="loginForm" :rules="loginFormRules" label-width="70px" class="form_box">
@@ -27,8 +32,12 @@
            </div>
         </div>
         <!-- 3.底部信息区 -->
-        <div>
-            <p> 本网站由小张同学提供技术支持</p>
+        <div class="foot_box">
+                  <p>本网站由小张个人独立开发|@copy版权所有|转载注明原作者 </p>
+                  <p>友情链接:
+                      <a href="https://blog.csdn.net/qq_42889406">https://blog.csdn.net/qq_42889406</a>
+                </p>
+                  <p>版本:vue_shop|2020.12.09|x.01.0</p>
         </div>
 
     </div>
@@ -86,38 +95,75 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.login_container{
-    height: 100%;
-    background-color: #429da1;
+*{
+    padding:0;
+    margin: 0;
 }
+.login_container{
+    position:absolute;
+    width: 100%;
+    height:42.5rem;
+    background:url("../assets/img/login/login-bg.jpg") no-repeat fixed center;
+}
+
+// 头部栏
+.login-header{
+    width:100%;
+    height:5rem;
+    background-color:rgba(75, 73, 73,0.75);
+}
+
+.login-header>div{
+    margin-left:3.125rem;    
+}
+.login-header>div img{
+    width: 3.75rem;
+    height: 3.75rem;
+    margin: .625rem;
+}
+
+.login-header>div>p{
+    color: #fff;
+    font-size:2rem;
+    line-height:5rem;
+    font-weight: bold; 
+}
+
+
+
+//登录框
 .login_box{
    width:28.125rem;
    height:18.75rem;
    background-color: #fff;
    border-radius: .625rem;
    position:absolute;
-   left: 50%;
+   left: 70%;
    top:50% ;
    transform: translate(-50%,-50%);
 }
+.login_box>h2{
+    margin-top:1.875rem;
+    text-align: center;
+}
 .avatar_box{
-    width:8.125rem;
-    height:8.125rem;
+    width:6.25rem;
+    height:6.25rem;
     padding: .625rem;
-    border:.125rem solid #eee;
+    border:.125rem solid #cbcccc;
     border-radius: 50%;
     position:relative;
-    top:-30%;
+    top:-20%;
     margin:0 auto;
     background-color: #fff;
-  
 }
 .avatar_box>img{
    width:100%;
-   height: 100%;
+   height:100%;
    border-radius: 50%;
-   background-color: #eee;
+   
 }
+
 .form_box{
     position: absolute;
     top:6.25rem;
@@ -128,7 +174,22 @@ export default {
 .btns{
     display: flex;
     justify-content: flex-end;
-
 }
 
+// 底部内容
+.foot_box{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:5rem;
+    padding:.9375rem 0;
+    color:#eee;
+    background-color:rgba(75, 73, 73,0.9);
+    text-align: center;
+}
+
+.foot_box>p{
+    font-size: .875rem;
+    line-height: 1.5625rem;
+}
 </style>

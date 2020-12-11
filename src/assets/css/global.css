@@ -3,5 +3,32 @@ html,head,body,#app{
     height: 100%;
     margin: 0;
     padding: 0;
+}
 
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+
+a{
+    text-decoration: none;
+    color: #eee;
+}
+/* 重置样式 */
+.el-breadcrumb{
+    margin-bottom: .9375rem;
+}
+
+.el-card{
+    
+    box-shadow: 0 1px 1px rgba(0, 0,0,0.15) !important;
+}
+.el-table{
+    margin-top:20px;
+}
+.el-pagination{
+    margin-top: 40px;
+   text-align: center;
 }
