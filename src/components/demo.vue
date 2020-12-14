@@ -16,6 +16,16 @@
 
 <script>
 export default {
+  // 生命周期函数
+    created(){},
+    // 数据
+    data(){
+        return{
+
+        }
+    },
+    // 方法/函数
+    methods:{}
     
 }
 </script>

@@ -29,7 +29,21 @@ a{
 .el-table{
     margin-top:20px;
 }
+.tree-table{
+   margin-top:20px;
+}
+
 .el-pagination{
     margin-top: 40px;
    text-align: center;
 }
+
+.flotage{
+    /* height:220px; */
+    /* overflow:scroll; */
+    overflow: auto;
+}
+.el-cascader-menu{
+    height: 300px;
+}
+

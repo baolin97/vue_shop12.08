@@ -12,7 +12,7 @@
          <!-- 按钮 -->
        <el-row>
           <el-col>
-            <el-button>添加角色</el-button>
+            <el-button  type="primary" >添加角色</el-button>
           </el-col>
        </el-row>
            <!-- 表格 -->
@@ -38,7 +38,7 @@
                          </el-col>
                          <!--三级权限 -->
                          <el-col :span="18">
-                                <el-tag type="warning" v-for="(item3,i3) in item2.children" :key="item3.id" 
+                                <el-tag type="warning" v-for="(item3) in item2.children" :key="item3.id" 
                                 closable
                                 @close="removeRightById(scope.row,item3.id)"
                                 >

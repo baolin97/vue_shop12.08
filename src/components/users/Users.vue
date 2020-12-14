@@ -240,6 +240,7 @@ export default {
             selectedRoleId:''
         }
     },
+    
     // 生命周期函数-创建
     created(){
         // 获取用户列表
@@ -248,7 +249,6 @@ export default {
 
     // 方法
      methods:{
-
         //  获取用户数据
     async  getUserList(){
         const {data:res} = await this.$http.get('users',{params:this.queryInfo})
@@ -387,6 +387,7 @@ export default {
       this.selectedRoleId="",
       this.userInfo={}
     }
+
     },   
 }
 </script>
