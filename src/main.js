@@ -8,12 +8,17 @@ import "./assets/css/global.css"
 import './assets/fonts/iconfont.css'
 // 
 import axios from 'axios'
+// import echarts from 'echarts'
 import TreeTable from 'vue-table-with-tree-grid'
 // 富文本编辑器
 import VueQuillEditor from 'vue-quill-editor'
 import 'quill/dist/quill.core.css' 
 import 'quill/dist/quill.snow.css' 
 import 'quill/dist/quill.bubble.css'
+
+
+
+
 
 // 配置请求的根路径
 
@@ -27,14 +32,17 @@ axios.interceptors.request.use(config =>{
 });
 
 Vue.prototype.$http=axios
+// Vue.prototype.$echarts = echarts 
 
 Vue.config.productionTip = false
 
 Vue.component('tree-table',TreeTable)
 
+
 // 富文本注册全局
 Vue.use(VueQuillEditor)
 
+// 时间格式过滤器
 Vue.filter('dateFormat' , function(originVal){
    const dt= new Date(originVal);
 
